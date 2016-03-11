@@ -4,7 +4,7 @@
 
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20160310.603
+;; Package-Version: 20160310.1654
 ;; Version: 0.9
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.3"))
@@ -151,9 +151,12 @@ the element is a cons cell, it should take the form (regexp .
 face to apply)."
   :group 'which-key)
 
-(defcustom which-key-special-keys '("SPC" "TAB" "RET" "ESC" "DEL")
+(defcustom which-key-special-keys '()
   "These keys will automatically be truncated to one character
-and have `which-key-special-key-face' applied to them."
+and have `which-key-special-key-face' applied to them. This is
+disabled by default. Try this to see the effect.
+
+\(setq which-key-special-keys '(\"SPC\" \"TAB\" \"RET\" \"ESC\" \"DEL\")\)"
   :group 'which-key
   :type '(repeat string))
 
